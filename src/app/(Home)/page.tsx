@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Hire } from './Hire';
 import { SongsPlataforms } from './SongsPlataforms';
-import { StayInside } from './ StayInside';
+import { StayInside } from './StayInside';
 
 export default async function Home() {
     // const response = await fetch(
@@ -14,7 +14,7 @@ export default async function Home() {
         <div className="flex flex-col items-center justify-center w-full">
             <div id="top" className="h-1 w-full absolute top-0 z-[50]" />
 
-            <div className="relative w-full h-[250px] sm:h-[600px] md:h-[700px] md:px-0 px-6">
+            <div className="relative w-full h-[250px] sm:h-[600px] md:h-[700px] md:w-[1280px] md:px-0 px-6">
                 {/* Camada preta fina */}
                 <div className="absolute inset-0 bg-black/25 z-10" />
 
@@ -27,6 +27,16 @@ export default async function Home() {
                     quality={100}
                     className="object-cover object-center z-0"
                 />
+                <p className="absolute bottom-44 left-176 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-purple-900">
+                    <Image
+                        src="/logo-branco.png"
+                        alt="Logo"
+                        priority
+                        width={140}
+                        height={140}
+                        className=""
+                    />
+                </p>
             </div>
 
             <Hire />

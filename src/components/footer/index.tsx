@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import {
+    FaFacebook,
+    FaInstagram,
+    FaTiktok,
+    FaWhatsapp,
+    FaYoutube,
+} from 'react-icons/fa';
 
 export function Footer() {
     return (
@@ -23,6 +29,12 @@ export function Footer() {
                 </Link>
                 <Link href="" target="_blank">
                     <FaInstagram
+                        size={28}
+                        className="text-purple-900 font-bold hover:text-purple-200"
+                    />
+                </Link>
+                <Link href="" target="_blank">
+                    <FaWhatsapp
                         size={28}
                         className="text-purple-900 font-bold hover:text-purple-200"
                     />

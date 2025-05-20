@@ -66,14 +66,14 @@ export function Header() {
 
     return (
         <header
-            className={`md:fixed top-0 left-0 right-0 z-50 flex items-center px-6 md:px-32 py-4 md:py-0 transition-colors duration-300 ${
+            className={`md:fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-6 md:px-32 py-4 md:py-7 transition-colors duration-300 ${
                 isScrolled
                     ? 'bg-zinc-100 shadow-md'
                     : 'md:bg-transparent bg-zinc-100'
             }`}
         >
             {/* Logo Desktop */}
-            <Link href="/">
+            {/* <Link href="/">
                 <Image
                     src={
                         isScrolled
@@ -86,7 +86,7 @@ export function Header() {
                     height={100}
                     className="hidden md:block"
                 />
-            </Link>
+            </Link> */}
 
             {/* Logo Mobile Centralizado */}
             <div className="md:hidden flex-1 flex justify-center">
@@ -95,9 +95,9 @@ export function Header() {
                         src="/logo-parakunde-roxo.png"
                         alt="Logo"
                         priority
-                        width={50}
-                        height={50}
-                        className="block"
+                        width={70}
+                        height={70}
+                        className=""
                     />
                 </Link>
             </div>
@@ -138,7 +138,7 @@ export function Header() {
             </div>
 
             {/* Menu Desktop */}
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium ml-auto">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
                 {menus.map((menu) => (
                     <Link
                         key={menu.id}
