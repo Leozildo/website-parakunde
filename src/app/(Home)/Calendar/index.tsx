@@ -6,7 +6,6 @@ export async function Calendar() {
 
     const response = await fetch(url, { cache: 'no-store' });
     const data = await response.json();
-    console.log(data);
 
     return (
         <section className="w-full my-10 md:my-20 md:px-32 px-6 flex items-center justify-center flex-col">

@@ -6,7 +6,7 @@ export function Hire() {
     return (
         <section className="my-20 flex flex-col items-center justify-center gap-10 md:px-32 px-6 w-full">
             <div className="flex flex-col items-center justify-center md:mb-5">
-                <p className="text-xl text-purple-200">NÃO PERCA TEMPO</p>
+                <p className="text-xl text-purple-900/80">NÃO PERCA TEMPO</p>
                 <h2 className="text-3xl font-bold text-purple-900">
                     C O N T R A T E
                 </h2>

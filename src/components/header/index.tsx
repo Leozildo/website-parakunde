@@ -123,7 +123,7 @@ export function Header() {
                         {menus.map((menu) => (
                             <Link
                                 key={menu.id}
-                                href={menu.link}
+                                href=""
                                 onClick={() => setIsOpen(false)}
                                 className={`px-4 py-2 hover:bg-gray-50 ${
                                     pathname === menu.link
@@ -143,7 +143,7 @@ export function Header() {
                 {menus.map((menu) => (
                     <Link
                         key={menu.id}
-                        href={menu.link}
+                        href=""
                         className={`text-2xl ${
                             pathname === menu.link ? 'underline font-bold' : ''
                         } ${

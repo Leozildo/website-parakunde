@@ -16,19 +16,18 @@ export default async function Home() {
                     src="/fundo-home.png"
                     alt="Fundo"
                     fill
-                    priority
                     className="object-cover w-full h-full z-0"
                 />
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/grupo-sem-fundo.png"
+                    src="/grupo-sem-fundo-2.webp"
                     alt="Grupo Parakunde"
                     className="absolute z-10 left-1/2 transform -translate-x-1/2 bottom-0 h-[108%] object-contain hidden md:block"
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/grupo-sem-fundo.png"
+                    src="/grupo-sem-fundo-2.webp"
                     alt="Grupo Parakunde"
                     className="absolute z-10 left-1/2 transform -translate-x-1/2 bottom-0 h-full object-contain md:hidden block"
                 />
@@ -37,9 +36,9 @@ export default async function Home() {
                     <Image
                         src="/logo-branco.png"
                         alt="Logo"
-                        priority
                         width={140}
                         height={140}
+                        loading="lazy"
                     />
                 </div>
             </div>
