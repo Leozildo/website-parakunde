@@ -11,32 +11,41 @@ export default async function Home() {
     // const data = await response.json();
     // console.log(data);
     return (
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full relative">
             <div id="top" className="h-1 w-full absolute top-0 z-[50]" />
 
-            <div className="relative w-full h-[250px] sm:h-[600px] md:h-[700px] md:w-[1280px] md:px-0 px-6">
-                {/* Camada preta fina */}
-                <div className="absolute inset-0 bg-black/25 z-10" />
-
-                {/* Imagem de fundo responsiva */}
+            <div className="relative w-full h-[235px] sm:h-[600px] md:h-[700px]">
+                {/* Fundo atrás de tudo */}
                 <Image
-                    src="/grupo-parakunde-fundo.jpg"
-                    alt="Grupo Parakunde"
+                    src="/fundo-home.png"
+                    alt="Fundo"
                     fill
                     priority
-                    quality={100}
-                    className="object-cover object-center z-0"
+                    className="object-cover w-full h-full z-0"
                 />
-                <p className="absolute bottom-44 left-176 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-purple-900">
+
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="/grupo-sem-fundo.png"
+                    alt="Grupo Parakunde"
+                    className="absolute z-10 left-1/2 transform -translate-x-1/2 bottom-0 h-[108%] object-contain hidden md:block"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="/grupo-sem-fundo.png"
+                    alt="Grupo Parakunde"
+                    className="absolute z-10 left-1/2 transform -translate-x-1/2 bottom-0 h-full object-contain md:hidden block"
+                />
+                {/* Logo por cima do grupo */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 hidden md:block">
                     <Image
                         src="/logo-branco.png"
                         alt="Logo"
                         priority
                         width={140}
                         height={140}
-                        className=""
                     />
-                </p>
+                </div>
             </div>
 
             <Hire />

@@ -18,8 +18,9 @@ export function Hire() {
                             Israel Pereira
                         </p>
                         <Link
-                            href="/whatsss"
+                            href="https://wa.me/5511988929289"
                             className="flex  items-center justify-start gap-5 text-xl hover:opacity-50"
+                            target="_blank"
                         >
                             <FaWhatsapp size={32} className="text-purple-900" />{' '}
                             (11) 98892-9289 (Shows)
@@ -30,8 +31,9 @@ export function Hire() {
                             Daniel Silva
                         </p>
                         <Link
-                            href="/whatsss"
+                            href="https://wa.me/5511910049353"
                             className="flex items-center justify-center gap-5 text-xl hover:opacity-50"
+                            target="_blank"
                         >
                             <FaWhatsapp size={32} className="text-purple-900" />{' '}
                             (11) 91004-9353 (Imprensa)
@@ -44,8 +46,9 @@ export function Hire() {
                             Leozildo Barros
                         </p>
                         <Link
-                            href="/whatsss"
+                            href="https://wa.me/5511999890103"
                             className="flex items-center justify-center gap-5 text-xl hover:opacity-50"
+                            target="_blank"
                         >
                             <FaWhatsapp size={32} className="text-purple-900" />{' '}
                             (11) 99989-0103 (Marketing)
@@ -58,6 +61,7 @@ export function Hire() {
                         <Link
                             href="mailto:grupoparakunde2021@gmail.com"
                             className="flex items-center justify-start gap-1 hover:opacity-50"
+                            target="_blank"
                         >
                             <IoIosSend
                                 size={32}

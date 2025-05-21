@@ -27,13 +27,16 @@ export function Footer() {
                         className="text-purple-900 font-bold hover:text-purple-200"
                     />
                 </Link>
-                <Link href="" target="_blank">
+                <Link
+                    href="https://www.instagram.com/grupoparakunde"
+                    target="_blank"
+                >
                     <FaInstagram
                         size={28}
                         className="text-purple-900 font-bold hover:text-purple-200"
                     />
                 </Link>
-                <Link href="" target="_blank">
+                <Link href="https://wa.me/5511988929289" target="_blank">
                     <FaWhatsapp
                         size={28}
                         className="text-purple-900 font-bold hover:text-purple-200"
@@ -45,7 +48,10 @@ export function Footer() {
                         className="text-purple-900 font-bold hover:text-purple-200"
                     />
                 </Link>
-                <Link href="" target="_blank">
+                <Link
+                    href="https://www.tiktok.com/@grupoparakunde"
+                    target="_blank"
+                >
                     <FaTiktok
                         size={28}
                         className="text-purple-900 font-bold hover:text-purple-200"

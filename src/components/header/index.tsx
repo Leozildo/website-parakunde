@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { HiMenu } from 'react-icons/hi';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const menus = [
     { id: 1, name: 'Início', link: '/' },
@@ -154,6 +155,42 @@ export function Header() {
                         {menu.name}
                     </Link>
                 ))}
+                <Link
+                    href="https://www.tiktok.com/@grupoparakunde"
+                    target="_blank"
+                >
+                    <FaTiktok
+                        size={28}
+                        className={`${
+                            isScrolled
+                                ? 'text-purple-900 hover:text-purple-200'
+                                : 'text-white hover:text-white/60'
+                        }`}
+                    />
+                </Link>
+                <Link
+                    href="https://www.instagram.com/grupoparakunde"
+                    target="_blank"
+                >
+                    <FaInstagram
+                        size={28}
+                        className={`${
+                            isScrolled
+                                ? `text-purple-900 hover:text-purple-200`
+                                : 'text-white hover:text-white/60'
+                        }`}
+                    />
+                </Link>
+                <Link href="" target="_blank">
+                    <FaYoutube
+                        size={28}
+                        className={`${
+                            isScrolled
+                                ? 'text-purple-900 hover:text-purple-200'
+                                : 'text-white hover:text-white/60'
+                        }`}
+                    />
+                </Link>
             </nav>
         </header>
     );
