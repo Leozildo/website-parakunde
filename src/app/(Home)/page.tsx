@@ -3,13 +3,9 @@ import Image from 'next/image';
 import { Hire } from './Hire';
 import { SongsPlataforms } from './SongsPlataforms';
 import { StayInside } from './StayInside';
+import { Calendar } from './Calendar';
 
 export default async function Home() {
-    // const response = await fetch(
-    //     'https://opensheet.elk.sh/1zilH5wS1arLo0R7xp7Zxs6ZYNUFR-t8R35WNiRYq7cA/1'
-    // );
-    // const data = await response.json();
-    // console.log(data);
     return (
         <div className="flex flex-col items-center justify-center w-full relative">
             <div id="top" className="h-1 w-full absolute top-0 z-[50]" />
@@ -49,6 +45,7 @@ export default async function Home() {
             </div>
 
             <Hire />
+            <Calendar />
             <SongsPlataforms />
             <StayInside />
         </div>
