@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { HiMenu } from 'react-icons/hi';
 import { useEffect, useRef, useState } from 'react';
@@ -67,30 +66,12 @@ export function Header() {
 
     return (
         <header
-            className={`md:fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-6 md:px-32 py-4 md:py-7 transition-colors duration-300 ${
-                isScrolled
-                    ? 'bg-zinc-100 shadow-md'
-                    : 'md:bg-transparent bg-zinc-100'
+            className={`md:fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-6 md:px-32 md:py-7 transition-colors duration-300 ${
+                isScrolled ? 'bg-zinc-100 shadow-md' : 'md:bg-transparent'
             }`}
         >
-            {/* Logo Desktop */}
-            {/* <Link href="/">
-                <Image
-                    src={
-                        isScrolled
-                            ? '/logo-parakunde-roxo.png'
-                            : '/logo-branco.png'
-                    }
-                    alt="Logo"
-                    priority
-                    width={100}
-                    height={100}
-                    className="hidden md:block"
-                />
-            </Link> */}
-
             {/* Logo Mobile Centralizado */}
-            <div className="md:hidden flex-1 flex justify-center">
+            {/* <div className="md:hidden flex-1 flex justify-center">
                 <Link href="/">
                     <Image
                         src="/logo-parakunde-roxo.png"
@@ -101,10 +82,13 @@ export function Header() {
                         className=""
                     />
                 </Link>
-            </div>
+            </div> */}
 
-            {/* Botão menu mobile - agora à direita */}
-            <div className="md:hidden absolute right-4" ref={dropdownRef}>
+            {/* Botão menu mobile - direita */}
+            <div
+                className="md:hidden absolute right-6 top-6 z-50 p-2"
+                ref={dropdownRef}
+            >
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="text-2xl"
@@ -112,7 +96,7 @@ export function Header() {
                 >
                     <HiMenu
                         size={32}
-                        className={`text-purple-900 transform transition-transform duration-300 ${
+                        className={`text-white transform transition-transform duration-300 ${
                             isOpen ? 'rotate-180' : 'rotate-0'
                         }`}
                     />
@@ -127,7 +111,7 @@ export function Header() {
                                 onClick={() => setIsOpen(false)}
                                 className={`px-4 py-2 hover:bg-gray-50 ${
                                     pathname === menu.link
-                                        ? 'bg-zinc-100 font-semibold'
+                                        ? 'bg-zinc-100 font-semibold text-purple-900'
                                         : ''
                                 }`}
                             >
@@ -158,6 +142,7 @@ export function Header() {
                 <Link
                     href="https://www.tiktok.com/@grupoparakunde"
                     target="_blank"
+                    aria-label="Ir para o TikTok do Grupo Parakundê"
                 >
                     <FaTiktok
                         size={28}
@@ -171,6 +156,7 @@ export function Header() {
                 <Link
                     href="https://www.instagram.com/grupoparakunde"
                     target="_blank"
+                    aria-label="Ir para o Instagram do Grupo Parakundê"
                 >
                     <FaInstagram
                         size={28}
@@ -181,7 +167,11 @@ export function Header() {
                         }`}
                     />
                 </Link>
-                <Link href="" target="_blank">
+                <Link
+                    href=""
+                    target="_blank"
+                    aria-label="Ir para o YouTube do Grupo Parakundê"
+                >
                     <FaYoutube
                         size={28}
                         className={`${
