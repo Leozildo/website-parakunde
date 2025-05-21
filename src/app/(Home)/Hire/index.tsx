@@ -7,9 +7,9 @@ export function Hire() {
         <section className="my-20 flex flex-col items-center justify-center gap-10 md:px-32 px-6 w-full">
             <div className="flex flex-col items-center justify-center md:mb-5">
                 <p className="text-xl text-purple-900/80">NÃO PERCA TEMPO</p>
-                <h2 className="text-3xl font-bold text-purple-900">
+                <h1 className="text-3xl font-bold text-purple-900">
                     C O N T R A T E
-                </h2>
+                </h1>
             </div>
             <div className="flex md:flex-row flex-col items-center justify-center gap-5 md:gap-20">
                 <div className="flex flex-col items-center justify-center gap-8">

@@ -22,36 +22,54 @@ export function Footer() {
                     />
                 </Link>
                 <div className="flex items-center justify-between gap-8 md:gap-5 py-10 md:py-0">
-                    <Link href="" target="_blank">
+                    <Link
+                        href="https://www.facebook.com/grupoparakunde"
+                        target="_blank"
+                        aria-label="Ir para o Facebook do Grupo Parakundê"
+                    >
                         <FaFacebook
                             size={28}
                             className="text-purple-900 font-bold hover:text-purple-200"
                         />
                     </Link>
+
                     <Link
                         href="https://www.instagram.com/grupoparakunde"
                         target="_blank"
+                        aria-label="Ir para o Instagram do Grupo Parakundê"
                     >
                         <FaInstagram
                             size={28}
                             className="text-purple-900 font-bold hover:text-purple-200"
                         />
                     </Link>
-                    <Link href="https://wa.me/5511988929289" target="_blank">
+
+                    <Link
+                        href="https://wa.me/5511988929289"
+                        target="_blank"
+                        aria-label="Enviar mensagem no WhatsApp para o Grupo Parakundê"
+                    >
                         <FaWhatsapp
                             size={28}
                             className="text-purple-900 font-bold hover:text-purple-200"
                         />
                     </Link>
-                    <Link href="" target="_blank">
+
+                    <Link
+                        href="https://www.youtube.com/@grupoparakunde"
+                        target="_blank"
+                        aria-label="Ir para o canal no YouTube do Grupo Parakundê"
+                    >
                         <FaYoutube
                             size={28}
                             className="text-purple-900 font-bold hover:text-purple-200"
                         />
                     </Link>
+
                     <Link
                         href="https://www.tiktok.com/@grupoparakunde"
                         target="_blank"
+                        aria-label="Ir para o TikTok do Grupo Parakundê"
                     >
                         <FaTiktok
                             size={28}
