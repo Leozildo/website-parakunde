@@ -4,6 +4,7 @@ import { Hire } from './Hire';
 import { SongsPlataforms } from './SongsPlataforms';
 import { StayInside } from './StayInside';
 import { Calendar } from './Calendar';
+import { GroupPhoto } from './GroupPhoto';
 
 export default async function Home() {
     return (
@@ -54,6 +55,7 @@ export default async function Home() {
             </div>
 
             <Hire />
+            <GroupPhoto />
             <Calendar />
             <SongsPlataforms />
             <StayInside />

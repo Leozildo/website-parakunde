@@ -8,8 +8,8 @@ import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const menus = [
     { id: 1, name: 'Início', link: '/' },
-    { id: 2, name: 'Agenda', link: '/agenda' },
-    { id: 3, name: 'Eventos', link: '/eventos' },
+    { id: 2, name: 'Agenda', link: '#agenda' },
+    { id: 3, name: 'Fotos', link: '/fotos' },
     { id: 4, name: 'Sobre nós', link: '/sobre' },
     { id: 5, name: 'Contato', link: '/contato' },
 ];
