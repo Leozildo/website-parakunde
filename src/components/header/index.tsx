@@ -10,8 +10,8 @@ const menus = [
     { id: 1, name: 'Início', link: '/' },
     { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
     { id: 3, name: 'Fotos', link: '/fotos' },
-    { id: 4, name: 'Sobre nós', link: '/' },
-    { id: 5, name: 'Contato', link: '/' },
+    { id: 4, name: 'Sobre nós', link: '/sobre' },
+    { id: 5, name: 'Contato', link: '' },
 ];
 const socials = [
     {
@@ -22,15 +22,15 @@ const socials = [
     },
     {
         id: 2,
-        icon: <FaTiktok size={28} />,
-        name: 'Tiktok',
-        link: 'https://www.tiktok.com/@grupoparakunde',
-    },
-    {
-        id: 3,
         icon: <FaYoutube size={28} />,
         name: 'Youtube',
         link: 'https://www.youtube.com/@grupoparakunde',
+    },
+    {
+        id: 3,
+        icon: <FaTiktok size={28} />,
+        name: 'Tiktok',
+        link: 'https://www.tiktok.com/@grupoparakunde',
     },
 ];
 

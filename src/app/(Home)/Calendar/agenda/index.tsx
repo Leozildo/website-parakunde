@@ -27,20 +27,20 @@ export default function Agenda({ data }: AgendaProps) {
                                     key={index}
                                     className="p-4 border border-gray-200 rounded-lg shadow-md bg-white"
                                 >
-                                    <p>
-                                        <strong className="text-purple-900">
+                                    <p className="text-lg">
+                                        <strong className="text-purple-900 uppercase">
                                             Data:
                                         </strong>{' '}
                                         {item.Data}
                                     </p>
-                                    <p>
-                                        <strong className="text-purple-900">
+                                    <p className="text-lg">
+                                        <strong className="text-purple-900 text-lg uppercase">
                                             Local:
                                         </strong>{' '}
                                         {item.Local}
                                     </p>
-                                    <p>
-                                        <strong className="text-purple-900">
+                                    <p className="text-lg">
+                                        <strong className="text-purple-900 text-lg uppercase">
                                             Cidade:
                                         </strong>{' '}
                                         {item.Cidade}
