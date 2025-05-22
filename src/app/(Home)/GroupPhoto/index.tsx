@@ -12,7 +12,7 @@ const images = [
     '/nobre-parakunde.png',
 ];
 
-const animation = { duration: 25000, easing: (t: number) => t };
+const animation = { duration: 22000, easing: (t: number) => t };
 
 // function formatNameFromUrl(url: string) {
 //     const fileName = url.split('/').pop()?.replace('.png', '') || '';
@@ -81,6 +81,7 @@ export function GroupPhoto() {
                     ))}
                 </div>
             </div>
+            <div id="agenda" />
         </section>
     );
 }

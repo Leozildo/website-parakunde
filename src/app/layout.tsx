@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         siteName: 'Grupo Parakundê',
         images: [
             {
-                url: '/opengraph-image.webp', // deve estar na pasta public/
+                url: '/opengraph-image.webp',
                 width: 1883,
                 height: 698,
                 alt: 'Grupo Parakundê',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Grupo Parakundê | Oficial',
         description: 'Confira a agenda, shows e muito mais!',
-        images: ['/twitter-image.webp'], // também pode ser a mesma do OpenGraph
+        images: ['/twitter-image.webp'],
     },
 };
 
@@ -48,7 +48,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
-            <body className={`${robotoSans.className} antialiased bg-zinc-50`}>
+            <body
+                className={`${robotoSans.className} antialiased bg-zinc-50 scroll-smooth`}
+            >
                 <Header />
                 {children}
                 <Footer />

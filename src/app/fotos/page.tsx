@@ -1,14 +1,7 @@
 import Image from 'next/image';
+import { GaleryPhotos } from './GaleryPhotos';
 
-import { Hire } from './Hire';
-import { SongsPlataforms } from './SongsPlataforms';
-import { StayInside } from './StayInside';
-import { Calendar } from './Calendar';
-import { GroupPhoto } from './GroupPhoto';
-import { Suspense } from 'react';
-import { ScrollToElement } from './GroupPhoto/ScrollToElement';
-
-export default async function Home() {
+export default function Fotos() {
     return (
         <div className="flex flex-col items-center justify-center w-full relative">
             <div id="top" className="h-1 w-full absolute top-0 z-[50]" />
@@ -55,16 +48,7 @@ export default async function Home() {
                     />
                 </div>
             </div>
-
-            <Hire />
-            <GroupPhoto />
-            <Calendar />
-            <SongsPlataforms />
-            <StayInside />
-
-            <Suspense fallback={null}>
-                <ScrollToElement />
-            </Suspense>
+            <GaleryPhotos />
         </div>
     );
 }

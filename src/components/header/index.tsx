@@ -8,10 +8,30 @@ import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const menus = [
     { id: 1, name: 'Início', link: '/' },
-    { id: 2, name: 'Agenda', link: '#agenda' },
+    { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
     { id: 3, name: 'Fotos', link: '/fotos' },
     { id: 4, name: 'Sobre nós', link: '/sobre' },
     { id: 5, name: 'Contato', link: '/contato' },
+];
+const socials = [
+    {
+        id: 1,
+        icon: <FaInstagram size={28} />,
+        name: 'Instagram',
+        link: 'https://www.instagram.com/grupoparakunde',
+    },
+    {
+        id: 2,
+        icon: <FaTiktok size={28} />,
+        name: 'Tiktok',
+        link: 'https://www.tiktok.com/@grupoparakunde',
+    },
+    {
+        id: 3,
+        icon: <FaYoutube size={28} />,
+        name: 'Youtube',
+        link: 'https://www.youtube.com/@grupoparakunde',
+    },
 ];
 
 export function Header() {
@@ -45,24 +65,37 @@ export function Header() {
 
     // Observador de scroll
     useEffect(() => {
-        const target = document.getElementById('top');
-        if (!target) return;
+        const setupObserver = () => {
+            const target = document.getElementById('top');
+            if (!target) return;
 
-        observerRef.current = new IntersectionObserver(
-            ([entry]) => {
-                setIsScrolled(!entry.isIntersecting);
-            },
-            { root: null, threshold: 0.1 }
-        );
+            observerRef.current = new IntersectionObserver(
+                ([entry]) => {
+                    setIsScrolled(!entry.isIntersecting);
+                },
+                { root: null, threshold: 0.1 }
+            );
 
-        observerRef.current.observe(target);
+            observerRef.current.observe(target);
+        };
+
+        // Desconecta o anterior, se existir
+        if (observerRef.current) {
+            observerRef.current.disconnect();
+        }
+
+        // Delay para garantir que o novo DOM já foi montado
+        const timeout = setTimeout(() => {
+            setupObserver();
+        }, 50); // pequeno atraso (~1 frame)
 
         return () => {
-            if (observerRef.current && target) {
-                observerRef.current.unobserve(target);
+            clearTimeout(timeout);
+            if (observerRef.current) {
+                observerRef.current.disconnect();
             }
         };
-    }, []);
+    }, [pathname]);
 
     return (
         <header
@@ -70,20 +103,6 @@ export function Header() {
                 isScrolled ? 'bg-zinc-100 shadow-md' : 'md:bg-transparent'
             }`}
         >
-            {/* Logo Mobile Centralizado */}
-            {/* <div className="md:hidden flex-1 flex justify-center">
-                <Link href="/">
-                    <Image
-                        src="/logo-parakunde-roxo.png"
-                        alt="Logo"
-                        priority
-                        width={70}
-                        height={70}
-                        className=""
-                    />
-                </Link>
-            </div> */}
-
             {/* Botão menu mobile - direita */}
             <div
                 className="md:hidden absolute right-6 top-6 z-50 p-2"
@@ -107,7 +126,7 @@ export function Header() {
                         {menus.map((menu) => (
                             <Link
                                 key={menu.id}
-                                href=""
+                                href={menu.link}
                                 onClick={() => setIsOpen(false)}
                                 className={`px-4 py-2 hover:bg-gray-50 ${
                                     pathname === menu.link
@@ -127,7 +146,7 @@ export function Header() {
                 {menus.map((menu) => (
                     <Link
                         key={menu.id}
-                        href=""
+                        href={menu.link}
                         className={`text-2xl ${
                             pathname === menu.link ? 'underline font-bold' : ''
                         } ${
@@ -139,48 +158,21 @@ export function Header() {
                         {menu.name}
                     </Link>
                 ))}
-                <Link
-                    href="https://www.tiktok.com/@grupoparakunde"
-                    target="_blank"
-                    aria-label="Ir para o TikTok do Grupo Parakundê"
-                >
-                    <FaTiktok
-                        size={28}
-                        className={`${
+                {socials.map((social) => (
+                    <Link
+                        key={social.id}
+                        href={social.link}
+                        target="_blank"
+                        aria-label={`Ir para ${social.name} do Grupo Parakundê`}
+                        className={`text-2xl ${
                             isScrolled
                                 ? 'text-purple-900 hover:text-purple-200'
                                 : 'text-white hover:text-white/60'
                         }`}
-                    />
-                </Link>
-                <Link
-                    href="https://www.instagram.com/grupoparakunde"
-                    target="_blank"
-                    aria-label="Ir para o Instagram do Grupo Parakundê"
-                >
-                    <FaInstagram
-                        size={28}
-                        className={`${
-                            isScrolled
-                                ? `text-purple-900 hover:text-purple-200`
-                                : 'text-white hover:text-white/60'
-                        }`}
-                    />
-                </Link>
-                <Link
-                    href=""
-                    target="_blank"
-                    aria-label="Ir para o YouTube do Grupo Parakundê"
-                >
-                    <FaYoutube
-                        size={28}
-                        className={`${
-                            isScrolled
-                                ? 'text-purple-900 hover:text-purple-200'
-                                : 'text-white hover:text-white/60'
-                        }`}
-                    />
-                </Link>
+                    >
+                        {social.icon}
+                    </Link>
+                ))}
             </nav>
         </header>
     );
