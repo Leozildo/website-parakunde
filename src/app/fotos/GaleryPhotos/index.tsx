@@ -68,7 +68,7 @@ export function GaleryPhotos() {
 
     if (loading) {
         return (
-            <div className="flex items-center justify-center w-full h-screen">
+            <div className="flex items-center justify-center w-full px-6 md:px-32 my-20 md:my-30">
                 <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" />
             </div>
         );
