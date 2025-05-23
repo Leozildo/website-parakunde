@@ -5,6 +5,7 @@ interface EventProps {
     Data: string;
     Local: string;
     Cidade: string;
+    Horario: string;
 }
 
 export function groupByMonth(data: EventProps[]): Record<string, EventProps[]> {
