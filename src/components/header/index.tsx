@@ -24,7 +24,7 @@ const socials = [
         id: 2,
         icon: <FaYoutube size={28} />,
         name: 'Youtube',
-        link: 'https://www.youtube.com/@grupoparakunde',
+        link: 'https://www.youtube.com/@grupo.parakunde',
     },
     {
         id: 3,

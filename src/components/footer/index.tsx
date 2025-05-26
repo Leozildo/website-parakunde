@@ -8,6 +8,39 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 
+const socials = [
+    {
+        id: 1,
+        icon: <FaInstagram size={28} />,
+        name: 'Instagram',
+        link: 'https://www.instagram.com/grupoparakunde',
+    },
+    {
+        id: 2,
+        icon: <FaYoutube size={28} />,
+        name: 'Youtube',
+        link: 'https://www.youtube.com/@grupo.parakunde',
+    },
+    {
+        id: 3,
+        icon: <FaTiktok size={28} />,
+        name: 'Tiktok',
+        link: 'https://www.tiktok.com/@grupoparakunde',
+    },
+    {
+        id: 4,
+        icon: <FaWhatsapp size={28} />,
+        name: 'Whatsapp',
+        link: 'https://wa.me/5511988929289',
+    },
+    {
+        id: 5,
+        icon: <FaFacebook size={28} />,
+        name: 'Tiktok',
+        link: 'https://www.facebook.com/grupoparakunde',
+    },
+];
+
 export function Footer() {
     return (
         <footer className="md:px-32 px-6 ">
@@ -22,60 +55,17 @@ export function Footer() {
                     />
                 </Link>
                 <div className="flex items-center justify-between gap-8 md:gap-5 py-10 md:py-0">
-                    <Link
-                        href="https://www.facebook.com/grupoparakunde"
-                        target="_blank"
-                        aria-label="Ir para o Facebook do Grupo Parakundê"
-                    >
-                        <FaFacebook
-                            size={28}
-                            className="text-purple-900 font-bold hover:text-purple-200"
-                        />
-                    </Link>
-
-                    <Link
-                        href="https://www.instagram.com/grupoparakunde"
-                        target="_blank"
-                        aria-label="Ir para o Instagram do Grupo Parakundê"
-                    >
-                        <FaInstagram
-                            size={28}
-                            className="text-purple-900 font-bold hover:text-purple-200"
-                        />
-                    </Link>
-
-                    <Link
-                        href="https://wa.me/5511988929289"
-                        target="_blank"
-                        aria-label="Enviar mensagem no WhatsApp para o Grupo Parakundê"
-                    >
-                        <FaWhatsapp
-                            size={28}
-                            className="text-purple-900 font-bold hover:text-purple-200"
-                        />
-                    </Link>
-
-                    <Link
-                        href="https://www.youtube.com/@grupoparakunde"
-                        target="_blank"
-                        aria-label="Ir para o canal no YouTube do Grupo Parakundê"
-                    >
-                        <FaYoutube
-                            size={28}
-                            className="text-purple-900 font-bold hover:text-purple-200"
-                        />
-                    </Link>
-
-                    <Link
-                        href="https://www.tiktok.com/@grupoparakunde"
-                        target="_blank"
-                        aria-label="Ir para o TikTok do Grupo Parakundê"
-                    >
-                        <FaTiktok
-                            size={28}
-                            className="text-purple-900 font-bold hover:text-purple-200"
-                        />
-                    </Link>
+                    {socials.map((social) => (
+                        <Link
+                            key={social.id}
+                            href={social.link}
+                            target="_blank"
+                            aria-label={`Ir para ${social.name} do Grupo Parakundê`}
+                            className="text-2xl text-purple-900 hover:text-purple-200"
+                        >
+                            {social.icon}
+                        </Link>
+                    ))}
                 </div>
                 <div className="flex items-center md:justify-center justify-start mb-5 md:mb-0">
                     <Link

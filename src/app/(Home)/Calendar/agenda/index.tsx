@@ -1,10 +1,12 @@
 import { groupByMonth } from '@/hooks';
+import Link from 'next/link';
 
 interface EventProps {
-    Data: string; // formato dd/mm/yyyy
+    Data: string;
     Local: string;
     Cidade: string;
-    Horario: string; // formato HH:mm
+    Horario: string;
+    Ingresso: string;
 }
 
 interface AgendaProps {
@@ -49,7 +51,8 @@ export default function Agenda({ data }: AgendaProps) {
                                                 {item.Data} {item.Horario}{' '}
                                             </p>
                                             <span>
-                                                {isPast && '(Evento passado)'}
+                                                {isPast &&
+                                                    '(Evento já aconteceu!)'}
                                             </span>
                                             <p className="text-sm md:text-lg">
                                                 <strong className="text-purple-900 text-sm md:text-lg uppercase">
@@ -65,13 +68,22 @@ export default function Agenda({ data }: AgendaProps) {
                                             </p>
                                         </div>
                                         <div>
-                                            <button
-                                                type="button"
-                                                disabled={isPast}
-                                                className="bg-purple-900 hover:bg-purple-900/80 text-white font-bold py-2 px-4 rounded cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 text-sm md:text-base"
-                                            >
-                                                Comprar Ingresso
-                                            </button>
+                                            {isPast ? (
+                                                <span
+                                                    className="bg-gray-400 text-white font-bold py-2 px-4 rounded cursor-not-allowed opacity-50 text-xs md:text-base"
+                                                    title="Evento já aconteceu"
+                                                >
+                                                    Comprar Ingresso
+                                                </span>
+                                            ) : (
+                                                <Link
+                                                    href={item.Ingresso}
+                                                    target="_blank"
+                                                    className="bg-purple-900 hover:bg-purple-900/80 text-white font-bold py-2 px-4 rounded cursor-pointer text-xs md:text-base"
+                                                >
+                                                    Comprar Ingresso
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
                                 );
