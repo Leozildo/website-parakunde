@@ -1,12 +1,11 @@
 import { groupByMonth } from '@/hooks';
-import Link from 'next/link';
 
 interface EventProps {
     Data: string;
     Local: string;
     Cidade: string;
     Horario: string;
-    Ingresso: string;
+    // Ingresso: string;
 }
 
 interface AgendaProps {
@@ -71,7 +70,7 @@ export default function Agenda({ data }: AgendaProps) {
                                             </p>
                                         </div>
 
-                                        <div className="w-full md:w-auto">
+                                        {/* <div className="w-full md:w-auto">
                                             {isPast ? (
                                                 <span
                                                     className="bg-gray-200 text-gray-500 font-bold py-2 px-4 rounded cursor-not-allowed text-xs md:text-base w-full block text-center"
@@ -88,7 +87,7 @@ export default function Agenda({ data }: AgendaProps) {
                                                     Comprar Ingresso
                                                 </Link>
                                             )}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 );
                             })}

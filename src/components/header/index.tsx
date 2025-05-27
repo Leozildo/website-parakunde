@@ -11,7 +11,7 @@ const menus = [
     { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
     { id: 3, name: 'Fotos', link: '/fotos' },
     { id: 4, name: 'Sobre nós', link: '/sobre' },
-    { id: 5, name: 'Contato', link: '/contato' },
+    { id: 5, name: 'Contato', link: 'https://wa.me/5511988929289' },
 ];
 const socials = [
     {
@@ -127,6 +127,11 @@ export function Header() {
                             <Link
                                 key={menu.id}
                                 href={menu.link}
+                                target={
+                                    menu.link.startsWith('http')
+                                        ? '_blank'
+                                        : '_self'
+                                }
                                 onClick={() => setIsOpen(false)}
                                 className={`px-4 py-2 hover:bg-gray-50 ${
                                     pathname === menu.link
@@ -147,6 +152,9 @@ export function Header() {
                     <Link
                         key={menu.id}
                         href={menu.link}
+                        target={
+                            menu.link.startsWith('http') ? '_blank' : '_self'
+                        }
                         className={`text-2xl ${
                             pathname === menu.link ? 'underline font-bold' : ''
                         } ${
