@@ -1,7 +1,7 @@
 import { About } from './About';
 import { StayInside } from '../../components/StayInside';
-import { GroupPhoto } from '@/components/GroupPhoto';
 import { Banner } from '@/components/banner';
+import { AboutIndividual } from './AboutIndividual';
 
 export default function Sobre() {
     return (
@@ -10,7 +10,8 @@ export default function Sobre() {
 
             <Banner />
             <About />
-            <GroupPhoto />
+            <AboutIndividual />
+
             <StayInside />
         </div>
     );

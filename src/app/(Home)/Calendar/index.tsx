@@ -2,7 +2,7 @@ import Agenda from './agenda';
 
 export async function Calendar() {
     const url =
-        'https://opensheet.elk.sh/1uHh61rZ5JCr12-rQz5kKOI1ECUW4mpt_aGwnIo5w3js/1';
+        'https://opensheet.vercel.app/1q60C5xSiDsP1mHzQSAGzsRGSXNQsbKxe_xzHQnt27yQ/1';
 
     const response = await fetch(url, { cache: 'no-store' });
     const data = await response.json();
