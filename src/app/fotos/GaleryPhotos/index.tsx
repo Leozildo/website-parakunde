@@ -97,14 +97,15 @@ export function GaleryPhotos() {
                         key={`${foto.url}-${index}`}
                         className="flex flex-col items-center justify-center max-w-[300px]"
                     >
-                        <Image
-                            src={foto.url}
-                            width={300}
-                            height={300}
-                            alt={`${foto.evento} - ${foto.lugar}`}
-                            className="rounded-xl object-cover"
-                            priority={index < 3}
-                        />
+                        <div className="w-[300px] h-[300px] relative rounded-xl overflow-hidden">
+                            <Image
+                                src={foto.url}
+                                alt={`${foto.evento} - ${foto.lugar}`}
+                                fill
+                                className="object-cover"
+                                priority={index < 3}
+                            />
+                        </div>
                         <p className="text-xl text-purple-900 max-w-[300px] font-bold pt-3 text-center">
                             {foto.evento}
                         </p>
