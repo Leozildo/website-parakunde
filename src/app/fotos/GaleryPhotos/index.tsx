@@ -113,7 +113,7 @@ export function GaleryPhotos() {
                             <span>
                                 {foto.lugar} - {foto.estado}
                             </span>
-                            <span>
+                            {/* <span>
                                 -{' '}
                                 {new Date(foto.data).toLocaleDateString(
                                     'pt-BR',
@@ -123,7 +123,7 @@ export function GaleryPhotos() {
                                         year: 'numeric',
                                     }
                                 )}
-                            </span>
+                            </span> */}
                         </div>
                     </div>
                 ))}

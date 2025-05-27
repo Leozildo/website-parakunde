@@ -49,7 +49,7 @@ export function Footer() {
                     <Image
                         src="/logo-parakunde-roxo.png"
                         alt="Logo"
-                        priority
+                        loading="lazy"
                         width={100}
                         height={100}
                     />
