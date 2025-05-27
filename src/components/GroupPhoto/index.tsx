@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
@@ -14,26 +15,23 @@ const images = [
 
 const animation = { duration: 22000, easing: (t: number) => t };
 
-// function formatNameFromUrl(url: string) {
-//     const fileName = url.split('/').pop()?.replace('.png', '') || '';
-//     const firstName = fileName.replace('-parakunde', '');
-//     return firstName.charAt(0).toUpperCase() + firstName.slice(1);
-// }
-
 export function GroupPhoto() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const [sliderRef] = useKeenSlider<HTMLDivElement>({
-        loop: true,
+        loop: !isMobile,
+        drag: isMobile,
         renderMode: 'performance',
-        drag: false,
-        created(s) {
-            s.moveToIdx(5, true, animation);
-        },
-        updated(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation);
-        },
-        animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation);
-        },
         slides: {
             perView: 1.2,
             spacing: 10,
@@ -52,12 +50,27 @@ export function GroupPhoto() {
                 },
             },
         },
+        created(s) {
+            if (!isMobile) {
+                s.moveToIdx(5, true, animation);
+            }
+        },
+        updated(s) {
+            if (!isMobile) {
+                s.moveToIdx(s.track.details.abs + 5, true, animation);
+            }
+        },
+        animationEnded(s) {
+            if (!isMobile) {
+                s.moveToIdx(s.track.details.abs + 5, true, animation);
+            }
+        },
     });
 
     return (
         <section className="w-full my-10 md:my-20 md:px-32 px-6 flex items-center justify-center flex-col">
             <div className="w-full space-y-4">
-                <h2 className="text-xl md:text-3xl font-bold text-purple-900 uppercase text-center md:mb-10 uppercase">
+                <h2 className="text-xl md:text-3xl font-bold text-purple-900 uppercase text-center md:mb-10">
                     Integrantes
                 </h2>
 
@@ -69,14 +82,11 @@ export function GroupPhoto() {
                         >
                             <Image
                                 src={src}
-                                alt={`Grupo Parakunde ${index + 1}`}
+                                alt={`Integrante Parakundê ${index + 1}`}
                                 width={325}
                                 height={400}
                                 className="rounded-lg shadow-lg w-[325px] h-[400px] object-cover"
                             />
-                            {/* <p className="text-center text-purple-900 font-medium uppercase text-xl">
-                                {formatNameFromUrl(src)}
-                            </p> */}
                         </div>
                     ))}
                 </div>
