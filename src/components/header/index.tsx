@@ -11,7 +11,7 @@ const menus = [
     { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
     { id: 3, name: 'Fotos', link: '/fotos' },
     { id: 4, name: 'Sobre nós', link: '/sobre' },
-    { id: 5, name: 'Contato', link: '' },
+    { id: 5, name: 'Contato', link: '/contato' },
 ];
 const socials = [
     {
