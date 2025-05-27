@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 interface FotoProps {
     lugar: string;
-    data: string;
     estado: string;
     evento: string;
     url: string;
