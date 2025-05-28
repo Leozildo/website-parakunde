@@ -6,6 +6,7 @@ import { GroupPhoto } from '../../components/GroupPhoto';
 import { Suspense } from 'react';
 import { ScrollToElement } from '../../components/GroupPhoto/ScrollToElement';
 import { Banner } from '@/components/banner';
+import { AudioPlayer } from '@/components/music';
 
 export default async function Home() {
     return (
@@ -17,6 +18,9 @@ export default async function Home() {
             <GroupPhoto />
             <Calendar />
             <SongsPlataforms />
+
+            <AudioPlayer />
+
             <StayInside />
 
             <Suspense fallback={null}>
