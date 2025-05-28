@@ -10,6 +10,7 @@ export function Banner() {
                 alt="Fundo"
                 fill
                 className="object-cover w-full h-full z-0"
+                priority
             />
 
             {/* eslint-disable-next-line @next/next/no-img-element */}

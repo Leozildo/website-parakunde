@@ -48,6 +48,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
+            <head>
+                <link rel="preload" as="image" href="/fundo-home.png" />
+            </head>
             <body
                 className={`${robotoSans.className} antialiased bg-zinc-50 scroll-smooth`}
             >
