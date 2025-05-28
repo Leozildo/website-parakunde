@@ -99,7 +99,7 @@ export function AudioPlayer() {
                     <audio
                         ref={audioRef}
                         preload="metadata"
-                        src="/audio/musica-parakunde-comprimida.mp4"
+                        src="/audio/eu-fui-pro-pagode.m4a"
                     />
 
                     {/* Barra de progresso */}
