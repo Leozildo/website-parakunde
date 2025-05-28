@@ -78,10 +78,11 @@ export function AudioPlayer() {
             <div className="w-full bg-white rounded-xl shadow-md p-4 flex flex-col sm:flex-row gap-6 items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/audio/capa-musica.png"
+                    src="/audio/capa-musica.webp"
                     alt="Capa da música"
                     width={256}
                     height={256}
+                    loading="lazy"
                     className="rounded-lg object-cover w-40 h-40 sm:w-1/2 sm:h-76"
                 />
 
@@ -116,6 +117,7 @@ export function AudioPlayer() {
                             step={0.1}
                             onChange={handleSeek}
                             className="w-full accent-purple-700"
+                            aria-label="Barra de progresso da música"
                         />
 
                         <span className="text-sm text-purple-700 w-10 text-left">

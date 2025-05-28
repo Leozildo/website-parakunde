@@ -54,6 +54,8 @@ export function MiniAudioPlayer({
                 <button
                     onClick={togglePlay}
                     className="text-purple-900 hover:text-purple-900/80 transition"
+                    name={isPlaying ? 'Pausar' : 'Tocar'}
+                    title={isPlaying ? 'Botão de Pausar' : 'Botão de Tocar'}
                 >
                     {isPlaying ? <HiPause size={40} /> : <HiPlay size={40} />}
                 </button>
