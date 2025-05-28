@@ -44,16 +44,16 @@ export function MiniAudioPlayer({
     }, []);
 
     return (
-        <div className="flex justify-between items-center bg-purple-50 p-4 rounded-lg shadow w-full">
+        <div className="flex justify-between items-center bg-white p-4 rounded-lg shadow w-full">
             <div>
-                <p className="font-semibold text-purple-800">{title}</p>
-                <p className="text-sm text-purple-600">{subtitle}</p>
+                <p className="font-semibold text-purple-900">{title}</p>
+                <p className="text-sm text-purple-900">{subtitle}</p>
             </div>
             <div className="flex items-center gap-2">
                 <audio ref={audioRef} src={src} preload="metadata" />
                 <button
                     onClick={togglePlay}
-                    className="text-purple-700 hover:text-purple-900 transition"
+                    className="text-purple-900 hover:text-purple-900/80 transition"
                 >
                     {isPlaying ? <HiPause size={40} /> : <HiPlay size={40} />}
                 </button>

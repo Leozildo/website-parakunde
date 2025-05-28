@@ -142,7 +142,7 @@ export function AudioPlayer() {
                 </div>
             </div>
             <div className="w-full flex flex-col gap-6 mt-10">
-                <h3 className="text-xl md:text-2xl font-semibold text-purple-900">
+                <h3 className="text-xl md:text-2xl font-bold text-purple-900">
                     Ouça também:
                 </h3>
 
