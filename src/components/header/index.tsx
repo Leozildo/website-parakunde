@@ -9,28 +9,30 @@ import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 const menus = [
     { id: 1, name: 'Início', link: '/' },
     { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
-    { id: 3, name: 'Fotos', link: '/fotos' },
+    { id: 3, name: 'Fotos', link: '/' },
     { id: 4, name: 'Sobre nós', link: '/sobre' },
-    { id: 5, name: 'Contato', link: 'https://wa.me/5511988929289' },
+    { id: 5, name: 'Contato', link: '' },
 ];
+// /fotos
+// https://wa.me/5511988929289
 const socials = [
     {
         id: 1,
         icon: <FaInstagram size={28} />,
         name: 'Instagram',
-        link: 'https://www.instagram.com/grupoparakunde',
+        link: '',
     },
     {
         id: 2,
         icon: <FaYoutube size={28} />,
         name: 'Youtube',
-        link: 'https://www.youtube.com/@grupo.parakunde',
+        link: '',
     },
     {
         id: 3,
         icon: <FaTiktok size={28} />,
         name: 'Tiktok',
-        link: 'https://www.tiktok.com/@grupoparakunde',
+        link: '',
     },
 ];
 
@@ -40,6 +42,10 @@ export function Header() {
     const observerRef = useRef<IntersectionObserver | null>(null);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const pathname = usePathname();
+
+    // https://www.youtube.com/@grupo.parakunde
+    // https://www.tiktok.com/@grupoparakunde
+    // https://www.instagram.com/grupoparakunde
 
     // Fecha o menu ao clicar fora
     useEffect(() => {
