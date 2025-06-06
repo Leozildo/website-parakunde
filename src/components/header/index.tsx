@@ -10,9 +10,10 @@ const menus = [
     { id: 1, name: 'Início', link: '/' },
     { id: 2, name: 'Agenda', link: '/?scrollTo=agenda' },
     { id: 3, name: 'Fotos', link: '/' },
-    { id: 4, name: 'Sobre nós', link: '/sobre' },
+    { id: 4, name: 'Sobre nós', link: '/' },
     { id: 5, name: 'Contato', link: '' },
 ];
+// /sobre
 // /fotos
 // https://wa.me/5511988929289
 const socials = [
