@@ -13,40 +13,35 @@ const socials = [
         id: 1,
         icon: <FaInstagram size={28} />,
         name: 'Instagram',
-        link: '',
+        link: 'https://www.instagram.com/grupoparakunde',
     },
     {
         id: 2,
         icon: <FaYoutube size={28} />,
         name: 'Youtube',
-        link: '',
+        link: 'https://www.youtube.com/@grupo.parakunde',
     },
     {
         id: 3,
         icon: <FaTiktok size={28} />,
         name: 'Tiktok',
-        link: '',
+        link: 'https://www.facebook.com/grupoparakunde',
     },
     {
         id: 4,
         icon: <FaWhatsapp size={28} />,
         name: 'Whatsapp',
-        link: '',
+        link: 'https://wa.me/5511988929289',
     },
     {
         id: 5,
         icon: <FaFacebook size={28} />,
         name: 'Tiktok',
-        link: '',
+        link: 'https://www.tiktok.com/@grupoparakunde',
     },
 ];
 
 export function Footer() {
-    // https://www.instagram.com/grupoparakunde
-    // https://www.youtube.com/@grupo.parakunde
-    // https://www.tiktok.com/@grupoparakunde
-    // https://wa.me/5511988929289
-    // https://www.facebook.com/grupoparakunde
     return (
         <footer className="md:px-32 px-6 ">
             <div className="flex md:flex-row flex-col items-center md:justify-between border-t border-purple-200 pt-10 md:pt-0">

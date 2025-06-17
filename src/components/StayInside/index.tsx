@@ -5,7 +5,7 @@ export function StayInside() {
     return (
         <section className="w-full my-10 md:my-20 md:px-32 px-6 flex items-center justify-center flex-col">
             <Link
-                href="https://hypeddit.com/ldfse"
+                href="https://hypeddit.com/lm7obp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl font-bold text-purple-900/80 uppercase hover:opacity-70 transition-opacity"
@@ -16,11 +16,8 @@ export function StayInside() {
                 Fique por dentro das novidades
             </h2>
             <div>
-                {/**
-                 * https://hypeddit.com/lm7obp
-                 */}
                 <Link
-                    href="https://hypeddit.com/ldfse"
+                    href="https://hypeddit.com/lm7obp"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
