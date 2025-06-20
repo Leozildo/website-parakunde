@@ -6,7 +6,12 @@ const plataforms = [
     { name: 'Spotify', icon: <FaSpotify size={40} />, id: 1, link: '' },
     { name: 'Deezer', icon: <FaDeezer size={40} />, id: 2, link: '' },
     { name: 'Apple Music', icon: <FaApple size={40} />, id: 3, link: '' },
-    { name: 'Youtube', icon: <FaYoutube size={40} />, id: 4, link: '' },
+    {
+        name: 'Youtube',
+        icon: <FaYoutube size={40} />,
+        id: 4,
+        link: 'https://www.youtube.com/@grupo.parakunde',
+    },
     {
         name: 'Amazon Music',
         icon: <TbBrandAmazon size={40} />,
