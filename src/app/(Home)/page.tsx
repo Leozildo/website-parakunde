@@ -7,6 +7,7 @@ import { Suspense } from 'react';
 import { ScrollToElement } from '../../components/GroupPhoto/ScrollToElement';
 import { Banner } from '@/components/banner';
 import { AudioPlayer } from '@/components/music';
+import Teaser from './teaser';
 
 export default async function Home() {
     return (
@@ -14,6 +15,7 @@ export default async function Home() {
             <div id="top" className="h-1 w-full absolute top-0 z-[50]" />
 
             <Banner />
+            <Teaser />
             <Hire />
             <GroupPhoto />
             <Calendar />
