@@ -94,9 +94,9 @@ export function GaleryPhotos() {
                 {currentFotos.map((foto, index) => (
                     <div
                         key={`${foto.url}-${index}`}
-                        className="flex flex-col items-center justify-center max-w-[300px]"
+                        className="flex flex-col items-center justify-center max-w-[350px]"
                     >
-                        <div className="w-[300px] h-[300px] relative rounded-xl overflow-hidden">
+                        <div className="w-[340px] h-[350px] relative rounded-xl overflow-hidden">
                             <Image
                                 src={foto.url}
                                 alt={`${foto.evento} - ${foto.lugar}`}
