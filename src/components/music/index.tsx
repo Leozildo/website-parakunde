@@ -44,26 +44,58 @@ export function AudioPlayer() {
         const audio = audioRef.current;
         if (!audio) return;
 
-        const onTimeUpdate = () => setCurrentTime(audio.currentTime);
         const onLoadedMetadata = () => setDuration(audio.duration);
         const onPlay = () => setIsPlaying(true);
         const onPause = () => setIsPlaying(false);
-        const onEnded = () => setIsPlaying(false);
+        const onEnded = () => {
+            setIsPlaying(false);
+            setCurrentTime(0);
+        };
 
-        audio.addEventListener('timeupdate', onTimeUpdate);
         audio.addEventListener('loadedmetadata', onLoadedMetadata);
         audio.addEventListener('play', onPlay);
         audio.addEventListener('pause', onPause);
         audio.addEventListener('ended', onEnded);
 
+        let raf: number;
+
+        const update = () => {
+            setCurrentTime(audio.currentTime);
+            raf = requestAnimationFrame(update);
+        };
+
+        if (!audio.paused) {
+            setIsPlaying(true);
+            raf = requestAnimationFrame(update);
+        }
+
         return () => {
-            audio.removeEventListener('timeupdate', onTimeUpdate);
             audio.removeEventListener('loadedmetadata', onLoadedMetadata);
             audio.removeEventListener('play', onPlay);
             audio.removeEventListener('pause', onPause);
             audio.removeEventListener('ended', onEnded);
+            cancelAnimationFrame(raf);
         };
     }, []);
+
+    useEffect(() => {
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        let raf: number;
+
+        if (isPlaying) {
+            const update = () => {
+                setCurrentTime(audio.currentTime);
+                raf = requestAnimationFrame(update);
+            };
+            raf = requestAnimationFrame(update);
+        }
+
+        return () => {
+            cancelAnimationFrame(raf);
+        };
+    }, [isPlaying]);
 
     return (
         <section className="my-10 md:my-20 flex flex-col items-center justify-center gap-10 md:px-32 px-6 w-full">
@@ -98,7 +130,7 @@ export function AudioPlayer() {
 
                     <audio
                         ref={audioRef}
-                        preload="metadata"
+                        preload="auto"
                         src="/audio/eu-fui-pro-pagode.m4a"
                     />
 
@@ -156,9 +188,9 @@ export function AudioPlayer() {
                     />
 
                     <MiniAudioPlayer
-                        title="Não Deixe Eu Perceber"
-                        subtitle="Romântico Atual"
-                        src="/audio/nao-deixe-eu-perceber.mp3"
+                        title="Joga no Pretinho"
+                        subtitle="Pagodinho"
+                        src="/audio/joga-pro-pretinho-master.mp3"
                     />
                 </div>
             </div>
