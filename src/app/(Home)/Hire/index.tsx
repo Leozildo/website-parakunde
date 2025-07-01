@@ -11,41 +11,10 @@ export function Hire() {
                     C O N T R A T E
                 </h1>
             </div>
-            <div className="flex md:flex-row flex-col items-center justify-center gap-5 md:gap-20">
-                <div className="flex flex-col items-center justify-center gap-8">
-                    <div className="space-y-2 text-left w-full">
-                        <div className="space-y-2">
-                            <p className="text-xl font-bold text-purple-900">
-                                Daniel Silva
-                            </p>
-                            <Link
-                                href="https://wa.me/5511910049353"
-                                className="flex items-center justify-center gap-5 text-xl hover:opacity-50"
-                                target="_blank"
-                            >
-                                <FaWhatsapp
-                                    size={32}
-                                    className="text-purple-900"
-                                />{' '}
-                                (11) 91004-9353 (Imprensa)
-                            </Link>
-                        </div>
-                        <p className="text-xl font-bold text-purple-900">
-                            Israel Pereira
-                        </p>
-                        <Link
-                            href="https://wa.me/5511988929289"
-                            className="flex  items-center justify-start gap-5 text-xl hover:opacity-50"
-                            target="_blank"
-                        >
-                            <FaWhatsapp size={32} className="text-purple-900" />{' '}
-                            (11) 98892-9289 (Shows)
-                        </Link>
-                    </div>
-                </div>
+            <div className="flex md:flex-row flex-col items-center justify-center gap-10 md:gap-20">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <div className="space-y-4">
-                        <p className="text-xl font-bold text-purple-900">
+                        <p className="text-xl font-bold text-purple-900 md:text-left text-center">
                             Leozildo Barros
                         </p>
                         <Link
@@ -70,6 +39,19 @@ export function Hire() {
                             </span>
                         </Link>
                     </div>
+                </div>
+                <div className="flex flex-col items-center justify-center space-y-4">
+                    <p className="text-xl font-bold text-purple-900">
+                        Israel Pereira
+                    </p>
+                    <Link
+                        href="https://wa.me/5511988929289"
+                        className="flex  items-center justify-start gap-5 text-xl hover:opacity-50"
+                        target="_blank"
+                    >
+                        <FaWhatsapp size={32} className="text-purple-900" />{' '}
+                        (11) 98892-9289 (Shows)
+                    </Link>
                 </div>
             </div>
         </section>
