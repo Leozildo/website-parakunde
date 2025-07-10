@@ -14,7 +14,7 @@ export function Hire() {
             <div className="flex md:flex-row flex-col items-center justify-center gap-10 md:gap-20">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <div className="space-y-4">
-                        <p className="text-xl font-bold text-purple-900 md:text-left text-center">
+                        <p className="text-xl font-bold text-purple-900 text-center">
                             Leozildo Barros
                         </p>
                         <Link
@@ -23,7 +23,7 @@ export function Hire() {
                             target="_blank"
                         >
                             <FaWhatsapp size={32} className="text-purple-900" />{' '}
-                            (11) 99989-0103 (Marketing)
+                            (11) 99989-0103
                         </Link>
                         <Link
                             href="mailto:grupoparakunde2021@gmail.com"
@@ -39,19 +39,6 @@ export function Hire() {
                             </span>
                         </Link>
                     </div>
-                </div>
-                <div className="flex flex-col items-center justify-center space-y-4">
-                    <p className="text-xl font-bold text-purple-900">
-                        Israel Pereira
-                    </p>
-                    <Link
-                        href="https://wa.me/5511988929289"
-                        className="flex  items-center justify-start gap-5 text-xl hover:opacity-50"
-                        target="_blank"
-                    >
-                        <FaWhatsapp size={32} className="text-purple-900" />{' '}
-                        (11) 98892-9289 (Shows)
-                    </Link>
                 </div>
             </div>
         </section>
