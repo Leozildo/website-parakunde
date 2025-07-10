@@ -39,7 +39,7 @@ export function Hire() {
                             </span>
                         </Link>
                         <Link
-                            href="mailto:grupoparakunde2021@gmail.com"
+                            href="mailto:grupoparakundeagenda@gmail.com"
                             className="flex items-center justify-start gap-1 hover:opacity-50"
                             target="_blank"
                         >
@@ -48,7 +48,7 @@ export function Hire() {
                                 className="text-purple-900 text-xl"
                             />{' '}
                             <span className="text-[18px]">
-                                grupoparakunde2021@gmail.com
+                                grupoparakundeagenda@gmail.com
                             </span>
                         </Link>
                     </div>
