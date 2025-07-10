@@ -26,6 +26,19 @@ export function Hire() {
                             (11) 99989-0103
                         </Link>
                         <Link
+                            href="mailto:leozildo.barros@gmail.com"
+                            className="flex items-center justify-start gap-1 hover:opacity-50"
+                            target="_blank"
+                        >
+                            <IoIosSend
+                                size={32}
+                                className="text-purple-900 text-xl"
+                            />{' '}
+                            <span className="text-[18px]">
+                                leozildo.barros@gmail.com
+                            </span>
+                        </Link>
+                        <Link
                             href="mailto:grupoparakunde2021@gmail.com"
                             className="flex items-center justify-start gap-1 hover:opacity-50"
                             target="_blank"
